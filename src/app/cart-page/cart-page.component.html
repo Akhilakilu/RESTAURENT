@@ -1,0 +1,43 @@
+<div class="container">
+    <ul>
+
+        <li *ngFor="let cartItem of cart.items">
+
+            <div>
+                <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+
+            </div>
+            <div>
+                <a routerLink="/food/{{cartItem.food.id}}">
+                    {{cartItem.food.name}}
+                </a>
+            </div>
+            <div>
+                {{cartItem.food.price|currency}}
+            </div>
+
+            <div>
+
+                <button class="decrement" (click)="dec(cartItem)">-</button>
+                <div>{{cartItem.food.quantity}}</div>
+                <button class="increment" (click)="inc(cartItem)">+</button>
+
+                <div class="totalfood"> ITEM TOTAL:{{cartItem.food.total}}</div>
+            </div>
+           
+            <div>
+                <button class="remove-button btn btn-danger" (click)="removeFromCart(cartItem)">REMOVE</button>
+            </div>
+        </li>
+    </ul>
+    <div class="checkout">
+        <!-- <div class="food-count">
+            TOTAL PRODUCTS :
+            <div class="total-price">
+                TOTAL PRICE: {{this.priceof}}
+
+            </div> -->
+            <!-- <button (click)="tot(cartItem)"></button> -->
+            <button class="btn btn-primary" routerLink="/checkout/">ORDER NOW</button>
+        </div>
+    </div>

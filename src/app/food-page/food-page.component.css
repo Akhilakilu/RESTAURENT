@@ -1,0 +1,24 @@
+ .container{
+    display: flex;
+    align-items: center;
+     /* justify-content: center;
+    flex-wrap: wrap;
+    margin:3 rem;  */
+}
+.container{
+    min-width: 1000px;
+    max-width:1000px;
+} 
+img{
+     border-radius: 3rem;
+    width: 500px;
+    margin-top: 100px; 
+}
+.details{
+    margin-left: 800px;
+    margin-top: -400px;
+}
+.tags{
+    margin-left:-600px;
+    margin-top: -50px; 
+} 
